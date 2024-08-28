@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Sabatia Eye Hospital eLibrary</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Admin Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="admin.html">Dashboard</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="category-management">
+            <h2>Manage Categories</h2>
+            <form id="addCategoryForm">
+                <input type="text" id="categoryName" placeholder="Category Name" required>
+                <button type="submit">Add Category</button>
+            </form>
+            <div id="categoriesList">
+                <!-- Categories will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <section id="book-management">
+            <h2>Manage Books</h2>
+            <form id="addBookForm">
+                <input type="text" id="bookTitle" placeholder="Book Title" required>
+                <input type="text" id="bookAuthor" placeholder="Book Author" required>
+                <select id="bookCategory" required>
+                    <!-- Categories will be dynamically loaded here -->
+                </select>
+                <input type="text" id="bookPdfLink" placeholder="PDF Link" required>
+                <button type="submit">Add Book</button>
+            </form>
+            <div id="booksList">
+                <!-- Books will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
